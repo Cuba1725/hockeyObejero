@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+:root {
+    --azul:      #1D5A94;
+    --azulTrans: #1d5a94fa;
+    --rojo:      #8D0F10;
+    --negro:     #333533;
+    --blanco:    #f8f9fa;
+}
+
+@media (max-width: 450px){
+
+    html body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        width: 100%;
+        overflow-x: hidden;
+        font-family: 'Roboto';
+    }
+
+    main {
+        margin: 0 10px;
+    }
+    .navbar{ 
+        position: fixed;
+        width: 100%;
+        z-index: 998;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: var(--azul);
+    }    
+
+    .frase {
+        font-size: 15px;
+        color: var(--blanco);
+        padding-left: 15px;
+    }
+
+    .hamburger-inner, 
+    .hamburger-inner::before, 
+    .hamburger-inner::after {
+        background-color: var(--blanco);
+    }
+
+    .btnMenu {
+        position: sticky;
+        z-index: 999;
+    }
+/*------------- MENU ------------*/
+    .menu {        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: fixed;
+        padding-top: 50px;
+        z-index: 998;
+        width: 100%;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: var(--azulTrans);
+        transition: transform 0.3s ease; 
+       transform: translate(0 , -100%);
+    }
+
+    .menu a{
+        margin-top: 20px;
+        text-decoration: none;
+        font-size: 20px;
+        color: var(--blanco);
+    }
+    
+    .logo img{
+        width: 150px;
+        margin-top: 30px;
+        padding: 10px;
+    }
+
+    .is-active {
+        transform: translate(0,0);
+    }
+
+    .redes {
+        margin-top: 35px;
+        font-size: 32px;
+        color: var(--blanco);
+    }
+
+    .redes i {
+        padding: 10px;
+    }
+
+    /*------CAROUSEL------*/
+
+    .carousel {
+        width: 100%;
+        height: 150px;
+        margin-top: 15px;
+    }
+
+    .swiper-slide img {    
+        width: 100%;
+        height: 50%;
+        object-fit: cover;        
+      }
+
+    /*------titulo------*/
+
+    .contTitulo {
+        margin-top: 80px;
+        padding: 0 15px;        
+    }
+
+    .escudo {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contTitulo img {
+        width: 250px;
+    }
+    /*----Masonry-----*/
+   
+    .contGrid {
+        max-width: 100%;
+        overflow-x: hidden;
+        margin-top: 80px;
+    }
+
+    .grid {
+        position: relative;
+        max-width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        grid-template-rows: minmax(100px, auto);
+        grid-auto-flow: dense;
+        grid-gap: 10px;
+    }
+
+    .grid .grid-item {
+        background:#333;
+        display: grid;
+        place-items: center;
+        transition: 0.5s;        
+    }
+
+    .grid .grid-item img {
+        position: relative;        
+        width: 100%;
+        height: 100%;    
+        object-fit: cover;
+    }
+
+    .grid .grid-item:nth-child(1){
+        grid-column: span 2;
+    }
+
+    .grid .grid-item:nth-child(2){
+        grid-row: span 2;
+    }
+
+    .grid .grid-item:nth-child(6){
+        grid-column: span 2;
+    }
+
+    /*--------FOOTER--------*/
+    .footer {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background: var(--rojo);
+        margin-top: 10px;
+    }
+
+    .logoFooter img{
+        width: 50px;
+        padding: 20px;
+        filter: saturate(0)
+    }
+
+    .redesFooter {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .redesFooter a{
+        color: var(--blanco);
+        font-size: 10px;
+        text-transform: capitalize;
+        text-decoration: none;
+    }
+
+    .redesFooter i {
+        padding: 5px;        
+        font-size: 15px;
+    }
+}
