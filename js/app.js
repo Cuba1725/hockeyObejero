@@ -7,6 +7,11 @@ btnMenu.addEventListener('click', e => {
     menu.classList.toggle('is-active');
 });
 
+menu.addEventListener('click', e => {
+    btnMenu.classList.remove('is-active');
+    menu.classList.remove('is-active');
+})
+
 
 ///SWIPER CAROUSEL
 window.addEventListener('load', function(){

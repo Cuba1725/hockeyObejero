@@ -9,12 +9,13 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/1.5.2/css/ionicons.min.css">
     <title>#HockeyObejero</title>
 </head>
 <body>
     <main>
         <div class="navbar">
-            <div class="frase">
+            <div class="frase" id="inicio">
                 <h2>Hockey Obejero unido</h2>
             </div>
             <button class="hamburger btnMenu hamburger--elastic" type="button">
@@ -23,9 +24,9 @@
                 </span>
               </button>
               <div class="menu hidden">
-                  <a href="#">Inicio</a>
-                  <a href="#">Galeria</a>
-                  <a href="#">Contacto</a>  
+                  <a href="#inicio">Inicio</a>
+                  <a href="#galeria">Galeria</a>
+                  <a href="#contacto">Contacto</a>  
                   <div class="logo">
                       <img src="./img/escudoHockeyWeb.png" alt="">
                   </div> 
@@ -37,10 +38,20 @@
         </div>
 
         <div class="contTitulo">
-            <h1>Llegó el Hockey en Obejero</h1>
+            <h1>Llegó el Hockey a Obejero</h1>
             <div class="escudo">
                 <img src="./img/escudoHockeyWeb.png" alt="">
             </div>
+            <br><hr>
+            <p>
+                Este proyecto apunta a un hockey social e integrador, buscando generar un espacio de
+                pertenencia para niñxs y adolescentes de todas las edades y genero en el cual se pueda
+                motivar a través del deporte los valores elementales, como la responsabilidad, el
+                compañerismo, y el respeto. <br>
+                El mismo tiene como propósito promover y potenciar la practica de esta disciplina, con
+                la intención de organizar torneos donde los fines de semana, puedan jugar para reflejar
+                todo lo aprendido durante la semana.
+            </p>
         </div>
 
 
@@ -81,18 +92,78 @@
         </div>            
     </div>   
     <!--GALERIA-->
-    <div class="contGrid">
+    <div class="contGrid" id="galeria">
         <h2>Galeria</h2>
         <div class="grid">
-            <div class="grid-item"><img src="./img/004.jpg" alt=""></div>
-            <div class="grid-item"><img src="./img/002.jpg" alt=""></div>
-            <div class="grid-item"><img src="./img/008.jpg" alt=""></div>
-            <div class="grid-item"><img src="./img/004.jpg" alt=""></div>
-            <div class="grid-item"><img src="./img/002.jpg" alt=""></div>
-            <div class="grid-item"><img src="./img/008.jpg" alt=""></div>    
+            <div class="grid-item"><img src="./img/011.jpg" alt=""></div>
+            <div class="grid-item"><img src="./img/014.jpg" alt=""></div>
+            <div class="grid-item"><img src="./img/016.jpg" alt=""></div>
+            <div class="grid-item"><img src="./img/015.jpg" alt=""></div>
+            <div class="grid-item"><img src="./img/013.jpg" alt=""></div>
+            <div class="grid-item"><img src="./img/012.jpg" alt=""></div>    
+            <div class="grid-item"><img src="./img/018.jpg" alt=""></div>
+            <div class="grid-item"><img src="./img/017.jpg" alt=""></div>
+            <div class="grid-item"><img src="./img/020.jpg" alt=""></div>
+            <div class="grid-item"><img src="./img/019.jpg" alt=""></div>            
         </div>
     </div>
 
+    <div class="profes">
+        <h2>Las Profes</h2>
+        <div class="profile">            
+            <img src="./img/021.jpg" alt="juli">
+            <div class="instagram">
+                <div class="acciones">
+                    <ion-icon class="corazon" name="heart"></ion-icon>
+                    <ion-icon name="chatbubble-outline"></ion-icon>
+                    <ion-icon name="paper-plane-outline"></ion-icon>
+                </div>
+                <div class="guardar">
+                    <ion-icon name="bookmark-outline"></ion-icon>
+                </div>
+            </div>
+            <div class="datos">
+                <h3 class="nombre">Juli</h3>
+                <a href="https://wa.me/1157245238" class="myButton"><i class="fab fa-whatsapp"></i>Contactar</a>
+            </div>
+        </div>
+
+        <div class="profile">            
+            <img src="./img/022.JPG" alt="juli">
+            <div class="instagram">
+                <div class="acciones">
+                    <ion-icon class="corazon" name="heart"></ion-icon>
+                    <ion-icon name="chatbubble-outline"></ion-icon>
+                    <ion-icon name="paper-plane-outline"></ion-icon>
+                </div>
+                <div class="guardar">
+                    <ion-icon name="bookmark-outline"></ion-icon>
+                </div>
+            </div>
+            <div class="datos">
+                <h3 class="nombre">Gi</h3>
+                <a href="https://wa.me/1121880249" class="myButton"><i class="fab fa-whatsapp"></i>Contactar</a>
+            </div>
+        </div>
+
+
+        
+    </div>
+    <br>
+    <hr>
+    <div class="contacto" id="contacto">
+        <h2>Contacto</h2>
+        <p>Si tenes alguna consulta, no dudes!<br>
+            Escribinos!!
+        </p>
+        <form>
+            
+            <input type="text" name="nombre" placeholder="Tu nombre" required="required"/>
+            <input type="email" name="email" placeholder="Tu email" required="required"/>
+            <textarea name="message" placeholder="Tu mensaje"></textarea>
+            <button class="btn" type="submit">Enviar  <ion-icon name="paper-plane-outline"></ion-icon></button>
+          </form>
+    </div>
 
     </main>
 
@@ -112,7 +183,11 @@
 
     <!--SWIPER CAROUSEL-->
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
-    
+    <!--IONICONS-->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+
     <!--JS-->
     <script src="./js/app.js"></script>
 </body>
