@@ -1,5 +1,6 @@
 const btnMenu = document.querySelector('.btnMenu');
 const menu =  document.querySelector('.menu');
+const aMenu = document.querySelectorAll('.menu a');
 
 
 btnMenu.addEventListener('click', e => {
@@ -19,7 +20,7 @@ window.addEventListener('load', function(){
     slidesPerView: 1,
     spaceBetween: 30,
     autoplay: {
-        delay: 2500,
+        delay: 3500,
         disableOnInteraction: false
     },
     loop: true,        
@@ -33,19 +34,38 @@ cerrar = document.querySelector(".cerrar"),
 show = document.querySelector('.imgShow')
 prevImg = show.querySelector('img');
 
-window.onload = () => {
-    for (let i = 0; i < galeria.length; i++) {
-        let indice = i;
-        let clickImagen;
-        console.log(galeria.length);
-        galeria[i].onclick = () => {
-            clickImagen = i;
+document.querySelectorAll('.grid .grid-item img').forEach((elemento) => {
+    const ruta = elemento.getAttribute('src');
+   
+    elemento.addEventListener('click', () => {
+        show.classList.add('show');
+        document.querySelector('.imgShow img').src = ruta;
+    });
+});
+
+cerrar.addEventListener('click', e => {
+    show.classList.remove('show');
+})
+
+///SCROLLBTN
+document.addEventListener('DOMContentLoaded', (e) => {
+    const scrollBtn = document.querySelector('.btnScroll');
+
+    window.addEventListener('scroll', e => {
+      let scrollTop = window.pageYOffset;
+     
+      if (scrollTop > 600){
         
-            function preview() {
-                let imageURL = galeria[indice].querySelector('img').src;
-                prevImg.src = imageURL;
-                console.log(imageURL);
-            }
-        }
-    }
-}
+        scrollBtn.classList.remove('hidden');
+      }else{
+        scrollBtn.classList.add('hidden');
+      }
+    });
+
+    scrollBtn.addEventListener('click', (e) => {
+        window.scrollTo({
+          behavior: "smooth",
+          top: 0,          
+        })
+      });
+  })

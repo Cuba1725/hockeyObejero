@@ -8,6 +8,10 @@
     --blanco:    #f8f9fa;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 @media (max-width: 450px){
 
     html body {
@@ -18,10 +22,13 @@
         overflow-x: hidden;
         font-family: 'Roboto';
         scroll-behavior: smooth;
+        transition: all 0.3s ease;
     }
 
     main {
         margin: 0 10px;
+        scroll-behavior: smooth;
+        transition: all 0.3s ease;
     }
     .navbar{ 
         position: fixed;
@@ -48,7 +55,8 @@
     }
 
     .btnMenu {
-        position: sticky;
+        position: fixed;
+        right: 0;
         z-index: 999;
     }
 /*------------- MENU ------------*/
@@ -114,7 +122,8 @@
 
     .contTitulo {
         margin-top: 80px;
-        padding: 0 15px;        
+        padding: 0 15px; 
+        text-align: center;       
     }
 
     .escudo {
@@ -127,6 +136,38 @@
     .contTitulo img {
         width: 250px;
     }
+
+    /*-----btn-scroll-------*/
+.btnScroll {
+    width: 40px;
+    height: 40px;
+    background: var(--rojo);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;    
+    color: var(--blanco);
+    z-index: 997;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+}
+
+.btnScroll i:hover{
+    transform: scale(0.9);
+}
+
+.hidden {
+    visibility: hidden;    
+    opacity: 0;
+}
+
+.icon {
+    font-size: 20px;
+}
+
     /*----Masonry-----*/
    
     .contGrid {
@@ -197,17 +238,18 @@
         right: 0;
         left: 0;
         background: var(--negro);        
-        opacity: 0;
+        display: none;
     }
 
     .show {
-        opacity: 1;
+        display: flex;
         transition: all 0.3s ease;        
     }
 
     .showImagen {
         width: 100%;        
-        height: 90vh;
+        height: 100vh;
+        position: relative;
         display: flex;
         justify-content: center;
         align-items: center;        
@@ -224,8 +266,9 @@
         color: var(--blanco);
         font-size: 32px;
         padding: 10px;
-        z-index: 999;
+        z-index: 1;
         right: 0;
+        top: 0;
     }
 
     /*--------FOOTER--------*/
@@ -364,9 +407,27 @@
       .contMaps{
           width: 100%;
           height: 100%;
+          margin-bottom: 10px;
       }
       
       #map {
         height: 360px;
+      }
+
+      .inscripcion {
+          width: 100%;
+          padding: 10px 0;
+          border: 1px solid var(--rojo);
+          border-radius: 10px;
+          margin: 10px 0;
+      }
+
+      .h4Form {
+          margin: 0;
+          padding: 0 5px;
+      }
+
+      .inscripcion a {
+        padding: 5px;
       }
 }
