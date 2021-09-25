@@ -25,3 +25,27 @@ window.addEventListener('load', function(){
     loop: true,        
     });      
 });
+
+///imgShow
+
+const galeria = document.querySelectorAll(".grid-item"),
+cerrar = document.querySelector(".cerrar"),
+show = document.querySelector('.imgShow')
+prevImg = show.querySelector('img');
+
+window.onload = () => {
+    for (let i = 0; i < galeria.length; i++) {
+        let indice = i;
+        let clickImagen;
+        console.log(galeria.length);
+        galeria[i].onclick = () => {
+            clickImagen = i;
+        
+            function preview() {
+                let imageURL = galeria[indice].querySelector('img').src;
+                prevImg.src = imageURL;
+                console.log(imageURL);
+            }
+        }
+    }
+}

@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
     <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/1.5.2/css/ionicons.min.css">
+    <!--MAPS-->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <title>#HockeyObejero</title>
 </head>
 <body>
@@ -107,6 +109,12 @@
             <div class="grid-item"><img src="./img/019.jpg" alt=""></div>            
         </div>
     </div>
+    <div class="imgShow">
+        <ion-icon class="cerrar" name="close-circle-outline"></ion-icon>
+        <div class="showImagen">            
+            <img src="./img/019.jpg" alt="">            
+        </div>
+    </div>
 
     <div class="profes">
         <h2>Las Profes</h2>
@@ -124,7 +132,7 @@
             </div>
             <div class="datos">
                 <h3 class="nombre">Juli</h3>
-                <a href="https://wa.me/1157245238" class="myButton"><i class="fab fa-whatsapp"></i>Contactar</a>
+                <a href="https://wa.link/v3jekv" class="myButton"><i class="fab fa-whatsapp"></i>Contactar</a>
             </div>
         </div>
 
@@ -142,7 +150,7 @@
             </div>
             <div class="datos">
                 <h3 class="nombre">Gi</h3>
-                <a href="https://wa.me/1121880249" class="myButton"><i class="fab fa-whatsapp"></i>Contactar</a>
+                <a href="https://wa.link/ls3zlw" class="myButton"><i class="fab fa-whatsapp"></i>Contactar</a>
             </div>
         </div>
 
@@ -165,6 +173,11 @@
           </form>
     </div>
 
+    <div class="contMaps">
+        <h3>Estamos en...</h3>
+        <div id="map"></div>
+    </div>
+
     </main>
 
     <footer>
@@ -183,12 +196,20 @@
 
     <!--SWIPER CAROUSEL-->
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    
     <!--IONICONS-->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
 
+    <!--MAPS-->
+    <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDZmdoYvTRl_dkaDH39x6KGvuxNwXAr82o&callback=initMap&v=weekly"
+    async
+  ></script>
+
     <!--JS-->
     <script src="./js/app.js"></script>
+    <script src="./js/maps.js"></script>
 </body>
 </html>
